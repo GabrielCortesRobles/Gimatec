@@ -22,7 +22,8 @@ class Maquinas extends Migration
 			
 			
 			$table->rememberToken();
-			$table->timestamps();
+            $table->timestamps();
+            $table->softDeletes();
 			 });
     }
 

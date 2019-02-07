@@ -3,3 +3,5 @@
 Route::get('/', 'Controller_inicio@home')->name('/');
 //Ruta para la vista " alta maquina"
 Route::get('nuevamaquina', 'Controller_maquinas@nuevamaquina')->name('nuevamaquina');
+//Ruta para guardar una nueva maquina
+Route::POST('guardarmaquina', 'Controller_maquinas@guardarmaquina')->name('guardarmaquina');
