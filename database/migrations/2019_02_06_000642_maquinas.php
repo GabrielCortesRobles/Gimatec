@@ -19,8 +19,6 @@ class Maquinas extends Migration
 			$table->integer('existencia');
 			$table->double('precio');
 			$table->string('archivo',40);
-			$table->unsignedInteger('idc');
-			$table->foreign('idc')->references('idc')->on('categorias');
 			
 			
 			$table->rememberToken();

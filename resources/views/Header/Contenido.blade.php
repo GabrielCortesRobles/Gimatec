@@ -16,7 +16,7 @@
             <li class="nav-item has-sub"><a href=""><i class="icon-eye"></i><span class="menu-title">Maquina</span></a>
                 <ul class="menu-content">
                     <li>
-                        <a class="menu-item" href="" data-i18n="nav.dash.ecommerce">
+                        <a class="menu-item" href="{{route('nuevamaquina')}}" data-i18n="nav.dash.ecommerce">
                             <i class="icon-plus">
 
                             </i>
