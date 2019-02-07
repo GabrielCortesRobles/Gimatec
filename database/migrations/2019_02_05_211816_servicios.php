@@ -17,7 +17,8 @@ class Servicios extends Migration
 			$table->string('servicio',40);
 			$table->string('descripcion',200);
 			$table->rememberToken();
-			$table->timestamps();
+            $table->timestamps();
+            $table->softDeletes();
         });
     }
 

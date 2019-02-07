@@ -17,7 +17,8 @@ class Categorias extends Migration
 			$table->string('categoria',40);
 			$table->string('descripcion',200);
 			$table->rememberToken();
-			$table->timestamps();
+            $table->timestamps();
+            $table->softDeletes();
         });
 			
     }
