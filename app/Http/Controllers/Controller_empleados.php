@@ -8,12 +8,19 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use App\municipios;
+use App\empleados;
 use Session;
 
 class Controller_empleados extends Controller
 {
+     //Vista del formulario nueva maquina
+	public function nuevo_empleado()
+	{
+		return view("Empleados.nuevo_empleado");
+	}
+
     //    FUNCIÓN PARA LA ALTA DEL EMPLEADO
-    public function altaempleado(Request $request)
+    public function guardaempleado(Request $request)
     {
         //SE GENERAN LAS VALIDACIONES PARA LOS FORMULARIOS
         $validacion = $this->validate($request,
@@ -66,6 +73,6 @@ class Controller_empleados extends Controller
         $empleado->archivo = $img2;
         $empleado->save();
 
-        return redirect('nuevo_empleado');
+        return redirect('');
     }
 }
