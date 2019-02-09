@@ -24,3 +24,108 @@
 {
     text-align: center;
 }
+
+.pagination li
+{
+    border-color: #e5e5e5;
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-left-width: 1px;
+    border-left-style: solid;
+    background-color: #ffffff;
+    padding-right: .5rem;
+    padding-left: .5rem;
+    display: list-item;
+    text-align: center;
+}
+.pagination
+{
+    border-color: #e5e5e5;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-left-width: 1px;
+    border-left-style: solid;
+    background-color: #ffffff;
+    display: inline-flex;
+}
+
+.desactivar
+{
+    border-color: #FA0;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-left-width: 1px;
+    border-left-style: solid;
+    background-color: #FA0;
+    border-radius: 4px;
+    color: #fff;
+    padding: .25rem;
+    margin: .25rem;
+}
+
+.editar
+{
+    border-color: #007bff;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-left-width: 1px;
+    border-left-style: solid;
+    background-color: #007bff;
+    border-radius: 4px;
+    color: #fff;
+    padding: .25rem;
+    margin: .25rem;
+}
+
+.eliminar
+{
+    border-color: #dc3545;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-left-width: 1px;
+    border-left-style: solid;
+    background-color: #dc3545;
+    border-radius: 4px;
+    color: #fff;
+    padding: .25rem;
+    margin: .25rem;
+}
+
+.restaurar
+{
+    border-color: #28a745;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-left-width: 1px;
+    border-left-style: solid;
+    background-color: #28a745;
+    border-radius: 4px;
+    color: #fff;
+    padding: .25rem;
+    margin: .25rem;
+}
+
+.opcion
+{
+    display: flex;
+}

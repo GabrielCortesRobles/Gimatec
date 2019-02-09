@@ -872,7 +872,8 @@ data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
   <!-- END MODERN JS-->
   <!-- BEGIN PAGE LEVEL JS-->
   <script src="{{asset('js/scripts/pages/dashboard-sales.min.js')}}" type="text/javascript"></script>
-  <!-- END PAGE LEVEL JS-->
+  <!-- archivo js para el catalogo de maquinas -->
+  <script src="{{asset('js/Sistema/maquinas.js')}}" type="text/javascript"></script>
 </body>
 
 <!-- Mirrored from pixinvent.com/modern-admin-clean-bootstrap-4-dashboard-html-template/html/ltr/vertical-modern-menu-template/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 17 May 2018 15:15:02 GMT -->

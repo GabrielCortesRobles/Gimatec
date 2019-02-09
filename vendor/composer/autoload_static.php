@@ -341,6 +341,7 @@ class ComposerStaticInit3b7bc2b92e6a7afc6969ff74f773518f
         'IlluminateQueueClosure' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Queue/IlluminateQueueClosure.php',
         'Instalaciones' => __DIR__ . '/../..' . '/database/migrations/2019_02_07_005225_instalaciones.php',
         'Maquinas' => __DIR__ . '/../..' . '/database/migrations/2019_02_06_000642_maquinas.php',
+        'MaquinasTableSeeder' => __DIR__ . '/../..' . '/database/seeds/MaquinasTableSeeder.php',
         'Municipios' => __DIR__ . '/../..' . '/database/migrations/2019_02_05_204010_municipios.php',
         'PHPUnit\\Framework\\Assert' => __DIR__ . '/..' . '/phpunit/phpunit/src/ForwardCompatibility/Assert.php',
         'PHPUnit\\Framework\\AssertionFailedError' => __DIR__ . '/..' . '/phpunit/phpunit/src/ForwardCompatibility/AssertionFailedError.php',
