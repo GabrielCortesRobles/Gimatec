@@ -24,7 +24,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="menu-item" href="" data-i18n="nav.dash.crypto">
+                        <a class="menu-item" href="{{route('reportemaquina')}}" data-i18n="nav.dash.crypto">
                             <i class="icon-notebook">
 
                             </i>

@@ -49,4 +49,45 @@ class Controller_maquinas extends Controller
 		$maquinas->save();
 		return redirect('nuevamaquina');
 	}
+
+	//Funcion para la vista del reporte de las maquinas
+	public function reportemaquina()
+	{
+		$maquinas = maquinas::withTrashed()
+								->orderBy('idm','ASC')
+								->paginate();
+		return view('Maquinas.Reportemaquina', compact('maquinas'));
+	}
+
+	//Funcion para la eliminacion logica de una maquina
+	public function desactivamaquina(Request $request, $idm)
+	{
+		if($request->ajax())
+		{
+			$maquina = maquinas::find($idm);
+			$maquina->delete();
+			$maq_total = maquinas::withTrashed()->count();
+
+			return response()->json([
+				'total' => $maq_total,
+				'message' => $maquina->nombre_maq . 'Fue desactivada correctamente'
+			]);
+		}
+	}
+
+	//Funcion para la restaurar una maquina
+	public function restauramaquina(Request $request, $idm)
+	{
+		if($request->ajax())
+		{
+			$maquina = maquinas::withTrashed('nombre_maq')->where('idm',$idm);
+			$maquina->restore();
+			$maq_total = maquinas::withTrashed()->count();
+
+			return response()->json([
+				'total' => $maq_total,
+				'message' => $maquina->nombre_maq . 'Fue activada correctamente'
+			]);
+		}
+	}
 }

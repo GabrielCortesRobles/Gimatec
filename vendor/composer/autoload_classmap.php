@@ -85,6 +85,7 @@ return array(
     'IlluminateQueueClosure' => $vendorDir . '/laravel/framework/src/Illuminate/Queue/IlluminateQueueClosure.php',
     'Instalaciones' => $baseDir . '/database/migrations/2019_02_07_005225_instalaciones.php',
     'Maquinas' => $baseDir . '/database/migrations/2019_02_06_000642_maquinas.php',
+    'MaquinasTableSeeder' => $baseDir . '/database/seeds/MaquinasTableSeeder.php',
     'Municipios' => $baseDir . '/database/migrations/2019_02_05_204010_municipios.php',
     'PHPUnit\\Framework\\Assert' => $vendorDir . '/phpunit/phpunit/src/ForwardCompatibility/Assert.php',
     'PHPUnit\\Framework\\AssertionFailedError' => $vendorDir . '/phpunit/phpunit/src/ForwardCompatibility/AssertionFailedError.php',

@@ -15,10 +15,10 @@ class Maquinas extends Migration
         Schema::create('maquinas', function (Blueprint $table) {
             $table->increments('idm');
 			$table->string('nombre_maq',40);
-			$table->string('descripcion_maq',40);
+			$table->string('descripcion_maq',100);
 			$table->integer('existencia');
 			$table->double('precio');
-			$table->string('archivo',40);
+			$table->string('archivo',200);
 			
 			
 			$table->rememberToken();

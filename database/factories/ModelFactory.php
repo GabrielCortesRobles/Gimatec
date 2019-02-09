@@ -19,3 +19,13 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'remember_token' => str_random(10),
     ];
 });
+
+$factory->define(App\maquinas::class, function (Faker\Generator $faker) {
+    return [
+        'nombre_maq' => $faker->sentence(2),
+        'descripcion_maq' => $faker->text(40),
+        'existencia' => $faker->randomNumber(2),
+        'precio' => $faker->randomNumber(4),
+        'archivo' => 'default-image.jpg',
+    ];
+});
