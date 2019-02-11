@@ -11,11 +11,10 @@ class empleados extends Model
     use SoftDeletes;
 
     protected  $primaryKey = 'ide';
-
-    protected $fillable = ['ide','nombre_emple','apat_emple','amat_emple',
-    'curp','fecha_emple','sexo_emple','tipo','id_mun','cp','localidad_emple',
+    protected $fillable=['ide','nombre_emple','apat_emple','amat_emple',
+    'curp','fecha_emple','sexo_emple','tipo','idmun','cp','localidad_emple',
     'calle_emple','num_int_emple','num_ext_emple','tele_emple','correo_emple',
-    'arcivo'];
+    'archivo'];
 
-    protected $date = ['deleted_at'];
+    protected $date=['deleted_at'];
 }

@@ -33,4 +33,46 @@ class Controller_servicios extends Controller
 		return redirect('nuevoservicio');
 	}
 
+	
+    //Funcion para la vista del reporte de las maquinas
+	public function reporteservicio()
+        {
+            $servicios = servicios::withTrashed()
+                                    ->orderBy('ids','ASC')
+                                    ->paginate();
+            return view('Servicios.Reporteservicio', compact('servicios'));
+        }
+
+	//Funcion para la eliminacion logica de una maquina
+	public function desactivaservicio(Request $request, $ids)
+        {
+            if($request->ajax())
+            {
+                $servicio =  servicios::find($ids);
+                $servicio->delete();
+                $ser_total = servicios::withTrashed()->count();
+
+                return response()->json([
+                    'total' => $ser_total,
+                    'message' => $servicio->servicio . 'Fue desactivada correctamente'
+                ]);
+            }
+        }
+
+	//Funcion para la restaurar una maquina
+	public function restauraservicio(Request $request, $ids)
+        {
+            if($request->ajax())
+            {
+                $servicio = servicios::withTrashed('servicio')->where('ids',$ids);
+                $servicio->restore();
+                $ser_total = servicios::withTrashed()->count();
+
+                return response()->json([
+                    'total' => $ser_total,
+                    'message' => $servicio->servicio . 'Fue activada correctamente'
+                ]);
+            }
+        }
+
 }
