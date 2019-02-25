@@ -3,7 +3,7 @@
 <div class="formulario">
     <h4 class='header-form'><b>RESULTADO DE CONSULTA</b></h4>
     <p>
-        <span id='maq-total'>{{$servicios->total()}}</span> Registros |
+        <span id='ser-total-1'>{{$servicios->total()}}</span> Registros |
         Página {{$servicios->currentPage()}}
         de {{$servicios->lastPage()}}
     </p>
@@ -34,10 +34,10 @@
                         {{csrf_field()}}
                         <a href="#" class='desactivar'><i class='icon-ban'></i></a>
                         </form> 
-                        <form class='opcion' action="{{route('editaservicio',$ser->ids)}}" method='POST' enctype='multipart/form-data'>
+
                         {{csrf_field()}}
-                        <a href="#" class='editar'><i class='icon-pencil'></i></a>
-                        </form>
+                        <a href="{{URL::action('Controller_servicios@editaservicio',['ids'=>$ser->ids])}}" class='editar'><i class='icon-pencil'></i></a>
+                        
                         @else
                         <form class='opcion' action="{{route('eliminaservicio',$ser->ids)}}" method='POST' enctype='multipart/form-data'>
                         {{csrf_field()}}

@@ -1,6 +1,6 @@
 $(document).ready(function()
 {
-    $("#alert-maquinas").hide();
+    $("#alert-servicios").hide();
     $(".desactivar").click(function(e){
         e.preventDefault();
         var confirmacion = confirm('¿Está seguro de eliminar?');
@@ -17,14 +17,14 @@ $(document).ready(function()
             alert(form);
             alert(url);*/
         
-            $("#alert-maquinas").show();
+            $("#alert-servicios").show();
 
             $.post(url, form.serialize(), function(result){
                 //row.fadeOut();
-                $('#maq-total').html(result.total);
-                $('#alert-maquinas').html(result.message);
+                $('#ser-total-1').html(result.total);
+                $('#alert-servicios').html(result.message);
             }).fail(function(){
-                $('#alert-maquinas').html('Algo salio mal');
+                $('#alert-servicios').html('Algo salio mal');
             });
         }
     });
@@ -45,21 +45,21 @@ $(document).ready(function()
             alert(form);
             alert(url);*/
         
-            $("#alert-maquinas").show();
+            $("#alert-servicios").show();
 
             $.post(url, form.serialize(), function(result){
                 alert(result.message)
                 row.fadeOut();
-                $('#alert-maquinas').html(result.message);
+                $('#alert-servicios').html(result.message);
             }).fail(function(){
-                $('#alert-maquinas').html('Algo salio mal');
+                $('#alert-servicios').html('Algo salio mal');
             });
         }
     });
 
     $(".eliminar").click(function(e){
         e.preventDefault();
-        var confirmacion = confirm('¿Está seguro de eliminar.?');
+        var confirmacion = confirm('¿Está seguro de eliminar servicioo.?');
         if(confirmacion == false)
         {
             return false;
@@ -73,14 +73,14 @@ $(document).ready(function()
             alert(form);
             alert(url);*/
         
-            $("#alert-maquinas").show();
+            $("#alert-servicios").show();
 
             $.post(url, form.serialize(), function(result2){
                 row.hide();
-                $('#maq-total').html(result2.total);
-                $('#alert-maquinas').html(result2.message);
+                $('#ser-total-1').html(result2.total);
+                $('#alert-servicios').html(result2.message);
             }).fail(function(){
-                $('#alert-maquinas').html('Algo salio mal');
+                $('#alert-servicios').html('Algo salio mal');
             });
         }
     });

@@ -41,10 +41,9 @@
                         {{csrf_field()}}
                         <a href="#" class='desactivar'><i class='icon-ban'></i></a>
                         </form> 
-                        <form class='opcion' action="{{route('editamaquina',$maq->idm)}}" method='POST' enctype='multipart/form-data'>
                         {{csrf_field()}}
-                        <a href="#" class='editar'><i class='icon-pencil'></i></a>
-                        </form>
+                        <a href="{{URL::action('Controller_maquinas@editamaquina',['idm'=>$maq->idm])}}" class='editar'><i class='icon-pencil'></i></a>
+                        
                         @else
                         <form class='opcion' action="{{route('eliminamaquina',$maq->idm)}}" method='POST' enctype='multipart/form-data'>
                         {{csrf_field()}}

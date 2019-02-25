@@ -3,7 +3,7 @@
 <div class="formulario">
     <h4 class='header-form'><b>RESULTADO DE CONSULTA</b></h4>
     <p>
-        <span id='maq-total'>{{$empleados->total()}}</span> Registros |
+        <span id='emp-total-1'>{{$empleados->total()}}</span> Registros |
         Página {{$empleados->currentPage()}}
         de {{$empleados->lastPage()}}
     </p>
@@ -30,8 +30,7 @@
                     <td>
                         <img src="{{asset('archivo/'.$emp->archivo)}}" heigth=50 width=50>
                     </td>
-                    <td>{{$emp->nombre_emple}}
-                    {{$emp->apat_emple}} {{$emp->amat_emple}}</td>
+                    <td>{{$emp->nombre_emple}} {{$emp->apat_emple}} {{$emp->amat_emple}}</td>
                     <td>{{$emp->tipo}}</td>
                     <td> {{$emp->correo_emple}}</td>
                     <td align='center'>
@@ -41,10 +40,10 @@
                         {{csrf_field()}}
                         <a href="#" class='desactivar'><i class='icon-ban'></i></a>
                         </form> 
-                        <form class='opcion' action="{{route('editaempleado',$emp->ide)}}" method='POST' enctype='multipart/form-data'>
+                        
                         {{csrf_field()}}
-                        <a href="#" class='editar'><i class='icon-pencil'></i></a>
-                        </form>
+                        <a href="{{URL::action('Controller_empleados@editaempleado',['ide'=>$emp->ide])}}" class='editar'><i class='icon-pencil'></i></a>
+                        
                         @else
                         <form class='opcion' action="{{route('eliminaempleado',$emp->ide)}}" method='POST' enctype='multipart/form-data'>
                         {{csrf_field()}}

@@ -122,7 +122,8 @@ class Controller_empleados extends Controller
         {
             if($request->ajax())
             {
-                empleados::find($ide)->delete();
+                $empleado = empleados::withTrashed()->where('ide',$ide);
+                $empleado->forceDelete();
                 $emp_total = empleados::withTrashed()->count();
 
                 return response()->json([
@@ -132,5 +133,77 @@ class Controller_empleados extends Controller
             }
         }
 
+       
+    public function editaempleado($ide)
+    {
+        $mempleado = empleados::withTrashed()->where('ide','=',$ide)->get();
+        $sexo = $mempleado[0]->sexo;
+        $idmunemp = $mempleado[0]->idmun;
+		$munemp = municipios::where('idmun','=',$idmunemp)
+									->orderBy('municipio','ASC')
+									->get();
+		$demasmun = municipios::where('idmun', '!=', $idmunemp)
+									->orderBy('municipio','ASC')
+                                    ->get();
+        return view("Empleados.Modifica_empleado")->with("mempleado",$mempleado[0])
+        ->with("sexo",$sexo)
+        ->with("idmunemp",$idmunemp)
+        ->with("munemp",$munemp[0]->municipio)
+        ->with("demasmun",$demasmun);
+    }
+
+    public function actualizaempleado(Request $request)
+    {
+        $ide = $request->ide;
+        $this->validate($request,
+        ['nombre_emple' =>['required','regex:/^[A-Z][A-Z,a-z, ,ñ,á,é,í,ó,ú]+$/'],
+         'apat_emple' => ['required','regex:/^[A-Z][A-Z,a-z, ,ñ,á,é,í,ó,ú]+$/'],
+         'amat_emple' => ['required','regex:/^[A-Z][A-Z,a-z, ,ñ,á,é,í,ó,ú]+$/'],
+         'curp' => ['required','regex:/^[A-Z]{4}[0-9]{6}[A-Z]{6}[0-9]{2}+$/'],
+         'fecha_emple'=>'required|date',
+         'cp' => ['required','regex:/^[0-9]{5}$/'],
+         'localidad_emple' => ['required','regex:/^[A-Z][A-Z,a-z, ,ñ,á,é,í,ó,ú,.]+$/'],
+         'calle_emple' => ['required','regex:/^[A-Z][A-Z,a-z, ,ñ,á,é,í,ó,ú]+$/'],
+         'num_int_emple' => 'required',
+         'num_ext_emple' => 'required',
+         'idmun' => 'required',
+         'tele_emple' => ['required','regex:/^[0-9]{10}$/'],
+         'correo_emple' => 'required|email',
+         'arhivo' =>'image|mimes:jpg,jpeg,png,gif'
+        ]);
+
+
+        $file = $request->file('archivo');
+        if($file!="")
+		{
+			$ldate = date('Ymd_His');
+			$img = $file->getClientOriginalName();
+			$img2 = $ldate.$img;
+			\Storage::disk('local')->put($img2, \File::get($file));
+        }
+        $empleados = empleados::find($ide);
+		if($file!="")
+		{
+            $empleados->archivo = $img2;
+        }
+        $empleados->nombre_emple = $request->nombre_emple;
+        $empleados->apat_emple = $request->apat_emple;
+        $empleados->amat_emple = $request->amat_emple;
+        $empleados->curp = $request->curp;
+        $empleados->fecha_emple = $request->fecha_emple;
+        $empleados->sexo_emple = $request->sexo_emple;
+        $empleados->tipo = $request->tipo;
+        $empleados->idmun = $request->idmun;
+        $empleados->cp = $request->cp;
+        $empleados->localidad_emple = $request->localidad_emple;
+        $empleados->calle_emple = $request->calle_emple;
+        $empleados->num_int_emple = $request->num_int_emple;
+        $empleados->num_ext_emple = $request->num_ext_emple;
+        $empleados->tele_emple = $request->tele_emple;
+        $empleados->correo_emple = $request->correo_emple;
+        $empleados->save();
+
+        return redirect ('reporteempleado');
+    }
 
 }

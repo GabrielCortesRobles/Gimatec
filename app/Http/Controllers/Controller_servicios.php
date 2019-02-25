@@ -59,7 +59,7 @@ class Controller_servicios extends Controller
             }
         }
 
-	//Funcion para la restaurar una maquina
+	//Funcion para la restaurar un empleado
 	public function restauraservicio(Request $request, $ids)
         {
             if($request->ajax())
@@ -74,5 +74,41 @@ class Controller_servicios extends Controller
                 ]);
             }
         }
+        //funcion para eliminar fisicamente un empleado
+        public function eliminaservicio(Request $request, $ids)
+        {
+            if($request->ajax())
+            {
+                $servicio=servicios::withTrashed()->where('ids',$ids);
+                $servicio->forceDelete();
+                $ser_total = servicios::withTrashed()->count();
+
+                return response()->json([
+                    'total' => $ser_total,
+                    'message' => $servicio->servicio . 'Fue eliminado correctamente'
+                ]);
+            }
+        }
+
+        
+
+        public function editaservicio($ids)
+	{
+		$ser = servicios::withTrashed()->where('ids','=',$ids)->get();
+		return view("Servicios.Modifica_servicio")->with("ser",$ser[0]);
+	}
+	public function actualizaservicio(Request $request)
+	{
+		$ids = $request->ids;
+		$this->validate($request,[
+			'servicio'=>['required','regex:/^[A-Z][A-Z,a-z, ,ñ,á,é,í,ó,ú]+$/'],
+			'descripcion'=>['regex:/^[A-Z][A-Z,a-z, ,ñ,á,é,í,ó,ú,0-9]+$/']
+		]);
+        $servicios = servicios::find($ids);
+		$servicios->servicio = $request->servicio;
+		$servicios->descripcion = $request->descripcion;
+		$servicios->save();
+		return redirect('reporteservicio');
+	}
 
 }
