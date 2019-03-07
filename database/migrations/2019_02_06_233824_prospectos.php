@@ -22,6 +22,7 @@ class Prospectos extends Migration
 			$table->string('curp_pro',40);
 			$table->date('fecha_pro');
 			$table->string('sexo_pro',40);
+			$table->string('correo_pro',40);
 			$table->string('empresa',40);
 			$table->Integer('idmun')->unsigned();
 			$table->string('cp_pro',10);

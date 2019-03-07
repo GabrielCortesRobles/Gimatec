@@ -79,3 +79,39 @@ Route::POST('guardaservicio', 'Controller_servicios@guardaservicio')->name('guar
 
 /*---------------------------------Se terminan las rutas de MARY---------------------------------*/
 /*---------------------------------Inician las rutas de Prospectos zona de CHUY---------------------------------*/
+//Ruta para la vista " alta maquina"
+Route::get('nuevoprospecto', 'Controller_prospectos@nuevoprospecto')->name('nuevoprospecto');
+//Ruta para guardar una nueva maquina
+Route::POST('guardarprospecto', 'Controller_prospectos@guardarprospecto')->name('guardarprospecto');
+//Ruta para la vista del reporte de las maquinas
+Route::get('reporteprospecto', 'Controller_prospectos@reporteprospecto')->name('reporteprospecto');
+//Ruta para la vista editar maquina
+Route::get('editaprospecto/{idp}', 'Controller_prospectos@editaprospecto')->name('editaprospecto');
+//Ruta para actualizar los datos de una maquina
+Route::POST('actualizaprospecto', 'Controller_prospectos@actualizaprospecto')->name('actualizaprospecto');
+//Ruta para eliminar logicamente los datos de una maquina
+Route::POST('desactivaprospecto/{idp}', 'Controller_prospectos@desactivaprospecto')->name('desactivaprospecto');
+//Ruta para restaurar la baja logica los datos de una maquina
+Route::POST('restauraprospecto/{idp}', 'Controller_prospectos@restauraprospecto')->name('restauraprospecto');
+//Ruta para eliminar fisicamente los registros de una maquina
+Route::POST('eliminaprospecto/{idp}', 'Controller_prospectos@eliminaprospecto')->name('eliminaprospecto');
+
+
+
+
+//Ruta para la vista " alta Categoria"
+Route::get('nuevacategoria', 'Controller_categorias@nuevacategoria')->name('nuevacategoria');
+//Ruta para guardar una nueva maquina
+Route::POST('guardarcategoria', 'Controller_categorias@guardarcategoria')->name('guardarcategoria');
+//Ruta para la vista del reporte de las maquinas
+Route::get('reportecategoria', 'Controller_categorias@reportecategoria')->name('reportecategoria');
+//Ruta para la vista editar maquina
+Route::get('editacategoria/{idc}', 'Controller_categorias@editacategoria')->name('editacategoria');
+//Ruta para actualizar los datos de una maquina
+Route::POST('actualizacategoria', 'Controller_categorias@actualizacategoria')->name('actualizacategoria');
+//Ruta para eliminar logicamente los datos de una maquina
+Route::POST('desactivacategoria/{idc}', 'Controller_categorias@desactivacategoria')->name('desactivacategoria');
+//Ruta para restaurar la baja logica los datos de una maquina
+Route::POST('restauracategoria/{idc}', 'Controller_categorias@restauracategoria')->name('restauracategoria');
+//Ruta para eliminar fisicamente los registros de una maquina
+Route::POST('eliminacategoria/{idc}', 'Controller_categorias@eliminacategoria')->name('eliminacategoria');

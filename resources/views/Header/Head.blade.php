@@ -874,6 +874,9 @@ data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
   <script src="{{asset('js/scripts/pages/dashboard-sales.min.js')}}" type="text/javascript"></script>
   <!-- archivo js para el catalogo de maquinas -->
   <script src="{{asset('js/Sistema/maquinas.js')}}" type="text/javascript"></script>
+  <!-- archivo js para el catalogo de maquinas -->
+  <script src="{{asset('js/Sistema/prospectos.js')}}" type="text/javascript"></script>
+  <script src="{{asset('js/Sistema/categorias.js')}}" type="text/javascript"></script>
 </body>
 
 <!-- Mirrored from pixinvent.com/modern-admin-clean-bootstrap-4-dashboard-html-template/html/ltr/vertical-modern-menu-template/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 17 May 2018 15:15:02 GMT -->
