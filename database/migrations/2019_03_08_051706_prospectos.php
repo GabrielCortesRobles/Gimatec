@@ -5,11 +5,6 @@ use Illuminate\Database\Migrations\Migration;
 
 class Prospectos extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
     public function up()
     {
         Schema::create('prospectos', function (Blueprint $table) {
@@ -26,14 +21,13 @@ class Prospectos extends Migration
 			$table->Integer('idmun')->unsigned();
 			$table->string('cp_pro',10);
 			$table->string('localidad_pro',40);
-			$table->string('calle_pro',40);
+			$table->string('calle_pro',50);
 			$table->integer('num_int_pro');
 			$table->integer('num_ext_pro');
 			$table->string('tele_pro',40);
 			$table->foreign('ide')->references('ide')->on('empleados');
-			$table->foreign('idstatus')->references('idstatus')->on('status');
+			$table->foreign('idstatus')->references('idstatus')->on('tipoprospectos');
 			$table->foreign('idmun')->references('idmun')->on('municipios');
-			
 			$table->rememberToken();
 			$table->timestamps();
 			$table->softDeletes();
@@ -41,11 +35,6 @@ class Prospectos extends Migration
 		
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
         Schema::drop('prospectos');
