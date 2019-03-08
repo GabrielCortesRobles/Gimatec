@@ -1,9 +1,9 @@
 $(document).ready(function()
 {
-    $("#alert-maquinas").hide();
-    $(".desactivar").click(function(e){
+    $("#alert-prospectos").hide();
+    $(".desactivar-prospecto").click(function(e){
         e.preventDefault();
-        var confirmacion = confirm('¿Está seguro de eliminar?');
+        var confirmacion = confirm('¿Está seguro de desactivar?');
         if(confirmacion == false)
         {
             return false;
@@ -17,19 +17,19 @@ $(document).ready(function()
             alert(form);
             alert(url);*/
         
-            $("#alert-maquinas").show();
+            $("#alert-prospectos").show();
 
             $.post(url, form.serialize(), function(result){
                 //row.fadeOut();
-                $('#maq-total').html(result.total);
-                $('#alert-maquinas').html(result.message);
+                $('#pro-total').html(result.total);
+                $('#alert-prospectos').html(result.message);
             }).fail(function(){
-                $('#alert-maquinas').html('Algo salio mal');
+                $('#alert-prospectos').html('Algo salio mal');
             });
         }
     });
 
-    $(".restaurar").click(function(e){
+    $(".restaurar-prospecto").click(function(e){
         e.preventDefault();
         var confirmacion = confirm('¿Está seguro de activar.?');
         if(confirmacion == false)
@@ -45,21 +45,22 @@ $(document).ready(function()
             alert(form);
             alert(url);*/
         
-            $("#alert-maquinas").show();
+            $("#alert-prospectos").show();
 
-            $.post(url, form.serialize(), function(result){
-                alert(result.message)
+            $.post(url, form.serialize(), function(result1){
                 row.fadeOut();
-                $('#alert-maquinas').html(result.message);
+                $('#pro-total').html(result1.total);
+                $('#alert-prospectos').html(result1.message);
             }).fail(function(){
-                $('#alert-maquinas').html('Algo salio mal');
+                $('#alert-prospectos').html('Algo salio mal');
             });
         }
     });
 
-    $(".eliminar").click(function(e){
+    
+    $(".eliminar-prospecto").click(function(e){
         e.preventDefault();
-        var confirmacion = confirm('¿Está seguro de eliminar.?');
+        var confirmacion = confirm('¿Está seguro de eliminar?');
         if(confirmacion == false)
         {
             return false;
@@ -73,14 +74,14 @@ $(document).ready(function()
             alert(form);
             alert(url);*/
         
-            $("#alert-maquinas").show();
+            $("#alert-prospectos").show();
 
-            $.post(url, form.serialize(), function(result2){
-                row.hide();
-                $('#maq-total').html(result2.total);
-                $('#alert-maquinas').html(result2.message);
+            $.post(url, form.serialize(), function(result){
+                row.fadeOut();
+                $('#pro-total').html(result.total);
+                $('#alert-prospectos').html(result.message);
             }).fail(function(){
-                $('#alert-maquinas').html('Algo salio mal');
+                $('#alert-prospectos').html('Algo salio mal');
             });
         }
     });

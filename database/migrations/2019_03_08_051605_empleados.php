@@ -15,7 +15,7 @@ class Empleados extends Migration
 			$table->string('curp',20);
 			$table->date('fecha_emple');
 			$table->string('sexo_emple',10);
-			$table->integer('tipo');
+			$table->string('tipo',20);
 			$table->Integer('idmun')->unsigned();
 			$table->string('cp',10);
 			$table->string('localidad_emple',40);
