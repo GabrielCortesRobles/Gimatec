@@ -111,7 +111,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="menu-item" href="" data-i18n="nav.dash.crypto">
+                        <a class="menu-item" href="{{route('reporteservicio')}}" data-i18n="nav.dash.crypto">
                             <i class="icon-notebook">
 
                             </i>
@@ -141,7 +141,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="menu-item" href="" data-i18n="nav.dash.crypto">
+                        <a class="menu-item" href="{{route('reporteempleado')}}" data-i18n="nav.dash.crypto">
                             <i class="icon-notebook">
 
                             </i>

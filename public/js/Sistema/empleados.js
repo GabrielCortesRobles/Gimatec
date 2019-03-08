@@ -1,6 +1,6 @@
 $(document).ready(function()
 {
-    $("#alert-maquinas").hide();
+    $("#alert-empleados").hide();
     $(".desactivar").click(function(e){
         e.preventDefault();
         var confirmacion = confirm('¿Está seguro de eliminar?');
@@ -17,14 +17,14 @@ $(document).ready(function()
             alert(form);
             alert(url);*/
         
-            $("#alert-maquinas").show();
+            $("#alert-empleados").show();
 
             $.post(url, form.serialize(), function(result){
                 //row.fadeOut();
-                $('#maq-total').html(result.total);
-                $('#alert-maquinas').html(result.message);
+                $('#emp-total-1').html(result.total);
+                $('#alert-empleados').html(result.message);
             }).fail(function(){
-                $('#alert-maquinas').html('Algo salio mal');
+                $('#alert-empleados').html('Algo salio mal');
             });
         }
     });
@@ -45,14 +45,14 @@ $(document).ready(function()
             alert(form);
             alert(url);*/
         
-            $("#alert-maquinas").show();
+            $("#alert-empleados").show();
 
             $.post(url, form.serialize(), function(result){
                 alert(result.message)
                 row.fadeOut();
-                $('#alert-maquinas').html(result.message);
+                $('#alert-empleados').html(result.message);
             }).fail(function(){
-                $('#alert-maquinas').html('Algo salio mal');
+                $('#alert-empleados').html('Algo salio mal');
             });
         }
     });
@@ -73,14 +73,14 @@ $(document).ready(function()
             alert(form);
             alert(url);*/
         
-            $("#alert-maquinas").show();
+            $("#alert-empleados").show();
 
             $.post(url, form.serialize(), function(result2){
                 row.hide();
-                $('#maq-total').html(result2.total);
-                $('#alert-maquinas').html(result2.message);
+                $('#emp-total-1').html(result2.total);
+                $('#alert-empleados').html(result2.message);
             }).fail(function(){
-                $('#alert-maquinas').html('Algo salio mal');
+                $('#alert-empleados').html('Algo salio mal');
             });
         }
     });
