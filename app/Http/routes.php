@@ -1,4 +1,6 @@
 <?php
+Route::get('/', 'Controller_inicio@login')->name('/');
+
 //Ruta principal del proyecto, es la primera vista que el usuario vera al logearse
 Route::get('/', 'Controller_inicio@home')->name('/');
 Route::get('mostrar', 'Controller_maquinas@mostrar')->name('mostrar');

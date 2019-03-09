@@ -36,8 +36,7 @@
   <link rel="stylesheet" type="text/css" href="{{asset('app-assets/css/plugins/parsley.css')}}"> 
   <!-- END Custom CSS-->
 </head>
-<body class="vertical-layout vertical-menu-modern 1-column   menu-expanded blank-page blank-page"
-data-open="click" data-menu="vertical-menu-modern" data-col="1-column">
+<body class="vertical-layout vertical-menu-modern 1-column   menu-expanded blank-page blank-page" data-open="click" data-menu="vertical-menu-modern" data-col="1-column">
   <!-- ////////////////////////////////////////////////////////////////////////////-->
   <div class="app-content content">
     <div class="content-wrapper">
@@ -60,7 +59,7 @@ data-open="click" data-menu="vertical-menu-modern" data-col="1-column">
                 </div>
                 <div class="card-content">
                   <div class="card-body">
-                    <form class="form-horizontal form-simple" action="{{route('validalogin')}}" method="post" data-parsley-validate>
+                    <form class="form-horizontal form-simple" action="{{route('')}}" method="post" data-parsley-validate>
                      {{csrf_field()}}
                       <fieldset class="form-group position-relative has-icon-left mb-0">
                         <input type="text" class="form-control form-control-lg input-lg" name="correo_usu" id="user-name" placeholder="Ingresa tu Correo"

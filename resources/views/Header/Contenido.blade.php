@@ -41,7 +41,7 @@
                     </li>
                 </ul>
             </li>
-            <!----------------------------------------Categoria--------------------------------------------------------------->
+            <!----------------------------------------Categoria---------------------------------------------------------
             <li class="nav-item has-sub"><a href=""><i class="icon-eye"></i><span class="menu-title">Categoria</span></a>
                 <ul class="menu-content">
                     <li>
@@ -69,8 +69,8 @@
                         </a>
                     </li>
                 </ul>
-            </li>
-<!----------------------------------------Maquinas--------------------------------------------------------------->
+            </li>------>
+<!----------------------------------------Maquinas-------------------------------------------------------------
             <li class="nav-item has-sub"><a href=""><i class="icon-eye"></i><span class="menu-title">Maquina</span></a>
                 <ul class="menu-content">
                     <li>
@@ -98,8 +98,8 @@
                         </a>
                     </li>
                 </ul>
-            </li>
-        <!--------------------------------------Servicios--------------------------------------------------------->
+            </li>------>
+        <!--------------------------------------Servicios--------------------------------------------------------
             <li class="nav-item has-sub"><a href=""><i class="icon-eye"></i><span class="menu-title">Servicio</span></a>
                 <ul class="menu-content">
                     <li>
@@ -127,7 +127,7 @@
                         </a>
                     </li>
                 </ul>
-            </li>
+            </li>------>
 
 <!-----------------------------------------Empleado--------------------------------------->
             <li class="nav-item has-sub"><a href=""><i class="icon-eye"></i><span class="menu-title">Empleado</span></a>
@@ -160,7 +160,7 @@
             </li>
 
 
-
+    <!--------------------------------------------------------- Vnet ---------------------------------------------------------
             <li class="nav-item has-sub"><a href=""><i class="icon-eye"></i><span class="menu-title">Ventas</span></a>
                 <ul class="menu-content">
                     <li>
@@ -188,7 +188,7 @@
                         </a>
                     </li>
                 </ul>
-            </li>
+            </li>------>
 
 
 

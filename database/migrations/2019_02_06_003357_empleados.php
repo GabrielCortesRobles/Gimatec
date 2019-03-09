@@ -29,6 +29,7 @@ class Empleados extends Migration
 			$table->string('num_ext_emple',10);
             $table->string('tele_emple',40);
             $table->string('correo_emple',50);
+            $table->string('contrasena',200);
             $table->string('archivo',200);
 			$table->foreign('idmun')->references('idmun')->on('municipios');
 			
