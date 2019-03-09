@@ -5,11 +5,6 @@ use Illuminate\Database\Migrations\Migration;
 
 class Empleados extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
     public function up()
     {
         Schema::create('empleados', function (Blueprint $table) {
@@ -24,26 +19,24 @@ class Empleados extends Migration
 			$table->Integer('idmun')->unsigned();
 			$table->string('cp',10);
 			$table->string('localidad_emple',40);
-			$table->string('calle_emple',40);
+			$table->string('calle_emple',50);
 			$table->string('num_int_emple',10);
 			$table->string('num_ext_emple',10);
             $table->string('tele_emple',40);
             $table->string('correo_emple',50);
+<<<<<<< HEAD:database/migrations/2019_02_06_003357_empleados.php
             $table->string('contrasena',200);
+=======
+            $table->string('pass_emple',250);
+>>>>>>> a7724811e1288cd06e3c4e2b36ca62c1886d308e:database/migrations/2019_03_08_051605_empleados.php
             $table->string('archivo',200);
 			$table->foreign('idmun')->references('idmun')->on('municipios');
-			
 			$table->rememberToken();
             $table->timestamps();
             $table->softDeletes();
 			 });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
         Schema::drop('empleados');

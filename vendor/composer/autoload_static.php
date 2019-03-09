@@ -262,11 +262,8 @@ class ComposerStaticInit3b7bc2b92e6a7afc6969ff74f773518f
     );
 
     public static $classMap = array (
-        'Categorias' => __DIR__ . '/../..' . '/database/migrations/2019_02_05_210313_categorias.php',
         'DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeds/DatabaseSeeder.php',
-        'Dvmaquinas' => __DIR__ . '/../..' . '/database/migrations/2019_02_07_001739_dvmaquinas.php',
-        'Dvservicios' => __DIR__ . '/../..' . '/database/migrations/2019_02_07_004042_dvservicios.php',
-        'Empleados' => __DIR__ . '/../..' . '/database/migrations/2019_02_06_003357_empleados.php',
+        'Empleados' => __DIR__ . '/../..' . '/database/migrations/2019_03_08_051605_empleados.php',
         'File_Iterator' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Iterator.php',
         'File_Iterator_Facade' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Facade.php',
         'File_Iterator_Factory' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Factory.php',
@@ -339,10 +336,9 @@ class ComposerStaticInit3b7bc2b92e6a7afc6969ff74f773518f
         'Hamcrest\\Util' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Util.php',
         'Hamcrest\\Xml\\HasXPath' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Xml/HasXPath.php',
         'IlluminateQueueClosure' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Queue/IlluminateQueueClosure.php',
-        'Instalaciones' => __DIR__ . '/../..' . '/database/migrations/2019_02_07_005225_instalaciones.php',
-        'Maquinas' => __DIR__ . '/../..' . '/database/migrations/2019_02_06_000642_maquinas.php',
         'MaquinasTableSeeder' => __DIR__ . '/../..' . '/database/seeds/MaquinasTableSeeder.php',
-        'Municipios' => __DIR__ . '/../..' . '/database/migrations/2019_02_05_204010_municipios.php',
+        'Municipios' => __DIR__ . '/../..' . '/database/migrations/2019_03_08_051456_municipios.php',
+        'Notas' => __DIR__ . '/../..' . '/database/migrations/2019_03_08_051741_notas.php',
         'PHPUnit\\Framework\\Assert' => __DIR__ . '/..' . '/phpunit/phpunit/src/ForwardCompatibility/Assert.php',
         'PHPUnit\\Framework\\AssertionFailedError' => __DIR__ . '/..' . '/phpunit/phpunit/src/ForwardCompatibility/AssertionFailedError.php',
         'PHPUnit\\Framework\\BaseTestListener' => __DIR__ . '/..' . '/phpunit/phpunit/src/ForwardCompatibility/BaseTestListener.php',
@@ -748,7 +744,7 @@ class ComposerStaticInit3b7bc2b92e6a7afc6969ff74f773518f
         'PHP_Token_XOR_EQUAL' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
         'PHP_Token_YIELD' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
         'PHP_Token_YIELD_FROM' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
-        'Prospectos' => __DIR__ . '/../..' . '/database/migrations/2019_02_06_233824_prospectos.php',
+        'Prospectos' => __DIR__ . '/../..' . '/database/migrations/2019_03_08_051706_prospectos.php',
         'SebastianBergmann\\Comparator\\ArrayComparator' => __DIR__ . '/..' . '/sebastian/comparator/src/ArrayComparator.php',
         'SebastianBergmann\\Comparator\\Comparator' => __DIR__ . '/..' . '/sebastian/comparator/src/Comparator.php',
         'SebastianBergmann\\Comparator\\ComparisonFailure' => __DIR__ . '/..' . '/sebastian/comparator/src/ComparisonFailure.php',
@@ -785,11 +781,9 @@ class ComposerStaticInit3b7bc2b92e6a7afc6969ff74f773518f
         'SebastianBergmann\\RecursionContext\\Exception' => __DIR__ . '/..' . '/sebastian/recursion-context/src/Exception.php',
         'SebastianBergmann\\RecursionContext\\InvalidArgumentException' => __DIR__ . '/..' . '/sebastian/recursion-context/src/InvalidArgumentException.php',
         'SebastianBergmann\\Version' => __DIR__ . '/..' . '/sebastian/version/src/Version.php',
-        'Servicios' => __DIR__ . '/../..' . '/database/migrations/2019_02_05_211816_servicios.php',
-        'Status' => __DIR__ . '/../..' . '/database/migrations/2019_02_05_210611_status.php',
         'TestCase' => __DIR__ . '/../..' . '/tests/TestCase.php',
         'Text_Template' => __DIR__ . '/..' . '/phpunit/php-text-template/src/Template.php',
-        'Ventas' => __DIR__ . '/../..' . '/database/migrations/2019_02_06_234811_ventas.php',
+        'Tipoprospectos' => __DIR__ . '/../..' . '/database/migrations/2019_03_08_051519_tipoprospectos.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

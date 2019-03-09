@@ -5,12 +5,7 @@ use Illuminate\Database\Migrations\Migration;
 
 class Municipios extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
-    public function up()
+	public function up()
     {
        Schema::create('municipios', function (Blueprint $table) {
             $table->increments('idmun');
@@ -22,11 +17,6 @@ class Municipios extends Migration
 			
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
         Schema::drop('municipios');

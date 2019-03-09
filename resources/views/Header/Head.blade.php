@@ -9,10 +9,10 @@
   <meta name="description" content="Modern admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities with bitcoin dashboard.">
   <meta name="keywords" content="admin template, modern admin template, dashboard template, flat admin template, responsive admin template, web app, crypto dashboard, bitcoin dashboard">
   <meta name="author" content="PIXINVENT">
-  <title>IMATEC
+  <title>GIMATEC
   </title>
   <link rel="apple-touch-icon" href="">
-  <link rel="shortcut icon" type="image/x-icon" href="{{asset('images/ico/gimatec.png')}}">
+  <link rel="shortcut icon" type="image/x-icon" href="{{asset('images/ico/gimatec-v3.png')}}">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Quicksand:300,400,500,700"
   rel="stylesheet">
   <link href="{{asset('../../maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.html')}}"
@@ -46,8 +46,8 @@ data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
           <li class="nav-item mobile-menu d-md-none mr-auto"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ft-menu font-large-1"></i></a></li>
           <li class="nav-item mr-auto">
             <a class="navbar-brand" href="{{route('/')}}">
-              <img class="brand-logo" alt="modern admin logo" src="{{asset('images/logo/gimatec.png')}}">
-              <h3 class="brand-text">imatec</h3>
+              <img class="brand-logo" alt="modern admin logo" src="{{asset('images/logo/gimatec-v3.png')}}">
+              <h3 class="brand-text">GIMATEC</h3>
             </a>
           </li>
           <li class="nav-item d-none d-md-block float-right"><a class="nav-link modern-nav-toggle pr-0" data-toggle="collapse"><i class="toggle-icon ft-toggle-right font-medium-3 white" data-ticon="ft-toggle-right"></i></a></li>
