@@ -59,17 +59,17 @@
                 </div>
                 <div class="card-content">
                   <div class="card-body">
-                    <form class="form-horizontal form-simple" action="{{route('')}}" method="post" data-parsley-validate>
+                    <form class="form-horizontal form-simple" action="{{route('validalogin')}}" method="post" data-parsley-validate>
                      {{csrf_field()}}
                       <fieldset class="form-group position-relative has-icon-left mb-0">
-                        <input type="text" class="form-control form-control-lg input-lg" name="correo_usu" id="user-name" placeholder="Ingresa tu Correo"
+                        <input type="text" class="form-control form-control-lg input-lg" name="correo_emple"  placeholder="Ingresa tu Correo"
                         required>
                         <div class="form-control-position">
                           <i class="ft-user"></i>
                         </div>
                       </fieldset>
                       <fieldset class="form-group position-relative has-icon-left">
-                        <input type="password" class="form-control form-control-lg input-lg" name="pass" id="user-password"
+                        <input type="password" class="form-control form-control-lg input-lg" name="pass_emple" 
                         placeholder="Ingresa tu Contraseña" required>
                         <div class="form-control-position">
                           <i class="la la-key"></i>

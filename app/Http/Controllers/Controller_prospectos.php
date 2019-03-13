@@ -8,7 +8,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\prospectos;
 use App\municipios;
-use App\status;
+use App\tipoprospectos;
 use App\empleados;
 
 class Controller_prospectos extends Controller
@@ -16,12 +16,12 @@ class Controller_prospectos extends Controller
     //vista del formulario nuevo prospecto
     public function nuevoprospecto()
     {
-        $municipios =municipios:: all();
-        $status =status:: all();
-        $empleados =empleados:: all();
+        $municipios = municipios::all();
+        $tipoprospectos = tipoprospectos::all();
+        $empleados = empleados::all();
         return view("Prospectos.Nuevo_prospecto")
         ->with('empleados', $empleados)
-        ->with('status', $status)
+        ->with('tipoprospectos', $tipoprospectos)
         ->with('municipios', $municipios);
         
     }
@@ -98,7 +98,7 @@ class Controller_prospectos extends Controller
          $idmun = $prospecto[0]->idmun;
          $empleactual = empleados::withTrashed()->where('ide','=',$ide)->get();
          $demasemple = empleados::withTrashed()->where('ide','!=',$ide)->get();
-         $staactual = status::withTrashed()->where('idstatus','=',$idstatus)->get();
+         $staactual = tipoprospectos::withTrashed()->where('idstatus','=',$idstatus)->get();
          $demassta = status::withTrashed()->where('idstatus','!=',$idstatus)->get();
          $munactual = municipios::where('idmun','=',$idmun)->get();
          $demasmun =  municipios::where('idmun','!=',$idmun)->get();

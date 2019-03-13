@@ -24,11 +24,7 @@ class Empleados extends Migration
 			$table->string('num_ext_emple',10);
             $table->string('tele_emple',40);
             $table->string('correo_emple',50);
-<<<<<<< HEAD:database/migrations/2019_02_06_003357_empleados.php
-            $table->string('contrasena',200);
-=======
             $table->string('pass_emple',250);
->>>>>>> a7724811e1288cd06e3c4e2b36ca62c1886d308e:database/migrations/2019_03_08_051605_empleados.php
             $table->string('archivo',200);
 			$table->foreign('idmun')->references('idmun')->on('municipios');
 			$table->rememberToken();

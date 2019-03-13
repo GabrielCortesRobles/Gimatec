@@ -263,7 +263,7 @@
                         <span class="input-group-text"><i class="icon-layers"></i></span>
                     </div>
                     <select class='form-control' name = 'idstatus'>
-                          @foreach($status as $sta)
+                          @foreach($tipoprospectos as $sta)
                           <option value = '{{$sta->idstatus}}'>{{$sta->statuss}}</option>
                           @endforeach
                       </select>

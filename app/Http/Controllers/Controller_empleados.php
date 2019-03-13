@@ -71,6 +71,7 @@ class Controller_empleados extends Controller
         $empleados->num_ext_emple = $request->num_ext_emple;
         $empleados->tele_emple = $request->tele_emple;
         $empleados->correo_emple = $request->correo_emple;
+        $empleados->pass_emple = $request->pass_emple;
         $empleados->archivo = $img2;
         $empleados->save();
         return redirect('nuevo_empleado');
@@ -201,9 +202,47 @@ class Controller_empleados extends Controller
         $empleados->num_ext_emple = $request->num_ext_emple;
         $empleados->tele_emple = $request->tele_emple;
         $empleados->correo_emple = $request->correo_emple;
+        $empleados->pass_emple = $request->pass_emple;
         $empleados->save();
 
         return redirect ('reporteempleado');
+    }
+
+
+    Public function validalogin(Request $request)
+    {
+        $correo_emple = $request->correo_emple;
+        $pass_emple = $request->pass_emple;
+        $consulta = empleados::withTrashed()
+                                ->where('correo_emple', $correo_emple)
+                                ->where('pass_emple', $pass_emple)
+                                ->get();
+        if(count($consulta)==0)
+        {
+			Session::flash('ups', 'Upps!');
+            Session::flash('error', 'El usuario no existe o la contraseña es incorrecta');
+            return redirect()->route('/');
+        }
+        else
+        {
+            if($consulta[0]->deleted_at !="")
+            {
+                Session::flash('error', 'El usuario esta desactivado, consulte a su administrador');
+                return redirect()->route('/');
+            }
+            else
+            {
+                Session::put('sesionname', $consulta[0]->nombre_emple);
+                Session::put('sesionid_empleado', $consulta[0]->ide);
+                //esto sirve para leer las sesiones
+                /*$sname = Session::get('sesionname');
+                $sidu = Session::get('sesionidu');
+                $stipo = Session::get('sesiontipo');
+
+                echo $sname. ' '.$sidu .' '. $stipo;*/
+                return redirect()->route('home');
+            }
+        }
     }
 
 }

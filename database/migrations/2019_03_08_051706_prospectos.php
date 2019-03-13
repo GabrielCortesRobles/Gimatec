@@ -23,8 +23,8 @@ class Prospectos extends Migration
 			$table->string('cp_pro',10);
 			$table->string('localidad_pro',40);
 			$table->string('calle_pro',50);
-			$table->integer('num_int_pro');
-			$table->integer('num_ext_pro');
+			$table->Integer('num_int_pro');
+			$table->Integer('num_ext_pro');
 			$table->string('tele_pro',40);
 			$table->foreign('ide')->references('ide')->on('empleados');
 			$table->foreign('idstatus')->references('idstatus')->on('tipoprospectos');

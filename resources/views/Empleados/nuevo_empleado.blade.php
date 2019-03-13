@@ -214,6 +214,22 @@
                         </div>
                     @endif
                 </div>
+                <!--------------------------------------------------------Pass--------------------------------------------------->
+                <div class="col-sm-4 col-md-4 col-lg-4">
+                    <label for="pass_emple">Contraseña:</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="icon-lock-open"></i></span>
+                        </div>
+                        <input type="password" class="form-control" name="pass_emple" id="pass_emple" value="{{old('pass_emple')}}" placeholder="">
+                    </div>
+                    @if($errors->first('pass_emple'))
+                        <div class="alert alert-warning alert-dismissible" role="alert">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <strong>ohoh!</strong> {{$errors->first('pass_emple')}}
+                        </div>
+                    @endif
+                </div>
                 <!--------------------------------------------------------Telefono--------------------------------------------------->
                 <div class="col-sm-4 col-md-4 col-lg-4">
                     <label for="tele_emple">Télefono:</label>
